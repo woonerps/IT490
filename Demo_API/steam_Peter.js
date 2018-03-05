@@ -21,4 +21,4 @@ var jcontent = {
 	}
 var output = document.getElementById('output');
 
-output.innerHTML= jcontent.personaname;
+output.innerHTML= jcontent.personaname + ' ' + jcontent.steamid + ' ' + jcontent.realname;
