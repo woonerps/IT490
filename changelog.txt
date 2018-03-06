@@ -1,0 +1,17 @@
+February 19, 2018
+	- Fixed router problems
+	- Completed login page
+	- Set up database to store users
+	- Fixed wifi/lan connection
+	- Got API info from steam and manually applied to a profile page
+February 27, 2018
+	- Added user registration to login/database
+	- Fixed problems with sending and receiving rabbitMQ messages
+	- Added security to when a login is wrong
+	- Integrated profile page to cluster
+March 5, 2018
+	- Added automatic API update from steam
+	 
+March 6, 2018
+	- Connected automatic API update login page to web login
+	- Updated login page, profile page, receive/send to github
