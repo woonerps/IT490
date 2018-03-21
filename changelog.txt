@@ -15,3 +15,8 @@ March 5, 2018
 March 6, 2018
 	- Connected automatic API update login page to web login
 	- Updated login page, profile page, receive/send to github
+March 8, 2018
+	- Started looking into setting up logging
+March 18, 2018
+	- Figured out how to set up server cluster by changing the erlang cookies and 
+	following commands to add one node to another host node and then restarting the rabbitmq servers
