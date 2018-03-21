@@ -16,6 +16,6 @@
             <li>Status: <?=personaState($json['response']['players'][0]['personastate']);?></li>
             <li>Real Name: <?=$json["response"]["players"][0]["realname"];?></li>
             <li>Joined: <?=$join_date;?></li>
-        </ul>
+       </ul>
     </body>
 </html>
