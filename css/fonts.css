@@ -1,0 +1,28 @@
+
+/* Article Titles Font */
+.panel-content h1,
+.panel-content h2,
+.panel-content h3,
+.panel-content h4,
+.panel-content h5,
+.panel-content h6 {
+	font-family:"News Cycle", sans-serif;
+}
+
+/* Menu & Panel Titles Font */
+.header .main-menu ul li a,
+.content .panel-block .panel-title h2,
+.footer .footer-explore > h2 {
+	font-family:"Montserrat", sans-serif;
+}
+
+/* Text size */
+p {
+	font-size: 12px;
+}
+
+/* Footer explore link size */
+.footer .footer-explore li a {
+	font-size: 11px;
+}
+

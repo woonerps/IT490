@@ -1,0 +1,22 @@
+
+/* Layout Color */
+.content .panel-block .panel-title,
+.header .main-menu li > .sub-menu,
+.sorting-bar a.active,
+.dragscroll-scrollbar,
+.slider-arrows .arrow-left,
+.slider-arrows .arrow-right,
+.content .panel-block .slider-block:hover .slider-play,
+#calendar_wrap table td#today {
+	background-color: #a31a1a;
+}
+.photo-gallery-single .large-photo .photo-nav-left,
+.photo-gallery-single .large-photo .photo-nav-right {
+	background-color: #a31a1a;
+	border: 7px solid #a31a1a;
+}
+
+/* Star-Rating color */
+.stars-block .star-inline {
+	background-color: #eec210;
+}
