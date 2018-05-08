@@ -1,0 +1,68 @@
+#!/bin/perl
+while(1){
+  print "Push/Pull/Create/Rollback\n";
+  chomp($condition= <STDIN>);
+  if ($condition =~ /push/){
+    print "What File to push\n";
+    chomp($input = <STDIN>);
+    print "To Quality or Production\n";
+    chomp($stage = <STDIN>);
+    if ($stage =~ /production/){
+      print "pushing file to Production....\n";      
+      system 'ssh -t amine\@192.168.1.30 "sudo rm -rf /production/*"';
+      system "scp -r /Development/$input amine\@192.168.1.30:/production";
+      print "Finished\n";
+  }
+    elsif($stage =~ /quality/){
+      print "pushing file to Quality....\n";
+      system 'sudo rm -rf /var/www/html/game';
+      system "scp -r /Development/$input aldo\@192.168.1.25:/Quality";
+      print "finishend\n";
+}
+
+  }
+  elsif($condition =~ /create/){
+    print "What version are you creating\n";
+    chomp($input = <STDIN>);
+    print "Which are you backing up\n";
+    chomp($input2 = <STDIN>);
+    print "creating file...to development\n";
+    system "sudo cp -r /Development/$input2 /backup/$input";
+   print "finished\n";  
+}
+  elsif($condition =~ /pull/){
+    print "which version would you like to pull from backup\n";
+    chomp($input = <STDIN>);
+    print "to what Development platform\n";
+    chomp($input2 = <STDIN>);
+    print "creating file...to development\n";
+    system "sudo cp -r /backup/$input /Development/$input2";
+    print "Finished\n";
+  }
+  elsif($condition =~ /rollback/){
+    print "what version should we rollback too\n";
+    chomp($input = <STDIN>);
+    print "To Quality or Production\n";
+    chomp($stage = <STDIN>);
+    if ($stage =~ /production/){
+      print "rollback file to Production....\n";
+      system 'ssh -t amine\@192.168.1.30 "sudo rm -rf /production/*"';
+      system "scp -r /Development/$input amine\@192.168.1.30:/production";
+      print "Finished\n";
+  }
+    elsif($stage =~ /quality/){
+      print "pushing file to Quality....\n";
+      system "ssh -t aldo\@192.168.1.25 'sudo rm -rf /Quality/game*'";
+      system "scp -r /Development/$input aldo\@192.168.1.25:/Quality";
+      print "finished\n";
+}
+  
+
+}
+  else{
+    print "No condition specefied\n";
+    
+
+  }
+
+}
