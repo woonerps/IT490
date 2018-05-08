@@ -1,0 +1,34 @@
+﻿February 19, 2018
+        - Fixed router problems
+        - Completed login page
+        - Set up database to store users
+        - Fixed wifi/lan connection
+        - Got API info from steam and manually applied to a profile page
+February 27, 2018
+        - Added user registration to login/database
+        - Fixed problems with sending and receiving rabbitMQ messages
+        - Added security to when a login is wrong
+        - Integrated profile page to cluster
+March 5, 2018
+        - Added automatic API update from steam
+March 6, 2018
+        - Connected automatic API update login page to web login
+        - Updated login page, profile page, receive/send to github
+March 8, 2018
+        - Started looking into setting up logging
+March 18, 2018
+- Figured out how to set up server cluster by changing the erlang cookies and 
+following commands to add one node to another host node and then restarting the rabbitmq servers
+March 20, 2018
+        -Added game schedule to website
+April 3, 2018
+        -Log in fixed
+April 19, 2018
+        -Database backup implementation
+April 24, 2018
+        -Fixed steam API
+May 7, 2018
+        -Corrected SSH Servers
+        -Created 3 stage development evironment
+May 8, 2018
+-Implemented Final code for transferring between backup computer, dev computer, production computer
